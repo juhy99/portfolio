@@ -300,7 +300,7 @@ p{
 }
 
 .category__btn.active .category__count,
-.category__btn.hover .category__count {
+.category__btn:hover .category__count {
     opacity: 1; /*불투명*/
     top: 0;
 }
