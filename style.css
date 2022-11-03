@@ -232,7 +232,7 @@ p{
 
 .skillset{
     display: flex;
-    background-color: var(--color-pink);
+    background-color: var(--color-gray);
     color: var(--color-white);
     margin: 20px 0;
 }
@@ -269,6 +269,7 @@ p{
 
 .skillset__right{
     flex-basis: 40%;
+    padding: 20px 40px;
 }
 
 .tools{
