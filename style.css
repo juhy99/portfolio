@@ -13,6 +13,7 @@
     --color-gray:  #544749;
     --color-yellow: #d9ed78;
     --color-orange: #feb546;
+    --color-deeppink: deeppink;
 
     --font-large: 48px;
     --font-medium:28px;
@@ -78,11 +79,20 @@ p{
 
 /* Navbar */
 #navbar{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
     background-color: var(--color-darkpink);
+    z-index: 1;
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--bold{
+    background-color: var(--color-deeppink);
+    padding: 10px;
 }
 
 .navbar__logo{
@@ -446,6 +456,28 @@ p{
     transform: scale(1.1);
     color: var(--color-yellow);
 }
+
+.arrow-up{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: white;
+    background-color: var(--color-pink);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 
 @media screen and (max-width: 768px) {
     .navbar__toggle-btn{
